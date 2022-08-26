@@ -1,0 +1,28 @@
+.thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f4fa;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+.section-feature {
+  padding-top: 94px;
+}
+.feature-item {
+  width: calc((100% - 90px) / 4);
+}
+.feature-title {
+  @include font(14px, 1.14, 700, 0.03em);
+  margin-bottom: 10px;
+}
+.feature-text {
+  @include font(14px, 1.7, null, 0.03em);
+  color: var(--title-text-color);
+}

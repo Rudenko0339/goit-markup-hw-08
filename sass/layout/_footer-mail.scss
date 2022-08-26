@@ -1,0 +1,26 @@
+.footer__mail {
+  margin-left: 93px;
+}
+
+.mail__text {
+  @include font(14px, 1.14, 700, 0.03em);
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.mail__link {
+  margin-left: 12px;
+}
+.mail__input {
+  @include font(16px, 1.25, null, 0.03em);
+  box-sizing: border-box;
+  width: 358px;
+  min-height: 50px;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 16px;
+}

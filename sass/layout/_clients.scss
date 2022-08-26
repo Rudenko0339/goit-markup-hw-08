@@ -1,0 +1,37 @@
+.clients {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 1px;
+  width: 170px;
+  height: 92px;
+  border-color: #afb1b8;
+  fill: #afb1b8;
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+  &:hover,
+  &:focus {
+    border-color: var(--acсent-color);
+    fill: var(--acсent-color);
+    outline: none;
+  }
+}
+.client-list {
+  display: flex;
+  gap: 30px;
+}
+.client-title {
+  @include font(36px, 1.17, 700, 0.03em);
+  text-align: center;
+  color: var(--primary-text-color);
+  margin-bottom: 50px;
+}

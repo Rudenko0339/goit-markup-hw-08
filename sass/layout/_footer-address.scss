@@ -1,0 +1,50 @@
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer__logo {
+  margin-bottom: 20px;
+}
+
+.address__logo {
+  @include font(26px, 1.19, 700, 0.03em);
+  display: inline-block;
+  color: #ffffff;
+  font-family: "raleway";
+  font-style: normal;
+  text-decoration: none;
+}
+.address__logo--blue {
+  color: var(--acсent-color);
+}
+.address__link {
+  @include font(14px, 1.71, null, 0.03em);
+  color: #ffffff;
+  font-family: "roboto";
+  text-decoration: none;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+  &:hover,
+  &:focus {
+    color: var(--acсent-color);
+    outline: none;
+  }
+}
+.address__list :not(:last-child) {
+  margin-bottom: 9px;
+}
+.address__mail,
+.address__tel {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}

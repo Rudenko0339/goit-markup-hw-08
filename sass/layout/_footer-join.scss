@@ -1,0 +1,38 @@
+.footer__join {
+  margin-left: 70px;
+}
+.join__text {
+  @include font(14px, 1.14, 700, 0.03em);
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.join__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  & :not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.join__link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--primary-white-color);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+  &:hover,
+  &:focus {
+    background-color: var(--acсent-color);
+    outline: none;
+  }
+}
