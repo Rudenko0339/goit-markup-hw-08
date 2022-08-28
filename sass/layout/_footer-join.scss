@@ -1,5 +1,11 @@
 .footer__join {
-  margin-left: 70px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 50%;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 .join__text {
   @include font(14px, 1.14, 700, 0.03em);
@@ -7,7 +13,6 @@
   color: #ffffff;
   margin-bottom: 20px;
 }
-
 .join__list {
   display: flex;
   justify-content: center;

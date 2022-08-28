@@ -3,22 +3,35 @@
   justify-content: center;
   align-items: center;
   background-color: #f5f4fa;
-  width: 270px;
+  // width: 270px;
   height: 120px;
   margin-bottom: 30px;
 }
 .feature-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 30px;
+  gap: 30px;
 }
 .section-feature {
   padding-top: 94px;
+  @media screen and (max-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 .feature-item {
-  width: calc((100% - 90px) / 4);
+  width: auto;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
 }
 .feature-title {
+  @media screen and (max-width: 480px) {
+    text-align: center;
+  }
   @include font(14px, 1.14, 700, 0.03em);
   margin-bottom: 10px;
 }

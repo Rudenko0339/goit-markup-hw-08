@@ -1,8 +1,22 @@
 .picture-list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
   gap: 30px;
+  @include tablet {
+    justify-content: start;
+  }
 }
+.picture-item {
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
 .hidden-item {
   position: relative;
   overflow: hidden;

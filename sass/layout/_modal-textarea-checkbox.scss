@@ -1,5 +1,6 @@
 .modal-text {
   @include font(14px, 1.17, null, 0.01em);
+
   display: block;
   width: 100%;
   height: 120px;
@@ -14,6 +15,9 @@
 }
 .check-text {
   @include font(14px, 1.71, null, 0.03em);
+  @media screen and (max-width: 480px) {
+    font-size: 9px;
+  }
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,6 +50,9 @@
 }
 .check-link {
   @include font(14px, 1.71, null, 0.03em);
+  @media screen and (max-width: 480px) {
+    font-size: 9px;
+  }
   display: flex;
   text-decoration-line: underline;
   color: var(--acсent-color);
