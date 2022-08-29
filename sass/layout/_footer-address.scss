@@ -2,8 +2,8 @@
   background-color: #2f303a;
   padding: 60px 0;
 }
-.footer-container {
-  @media screen and (min-width: 1200px) {
+.footer__container {
+  @include desktop {
     display: flex;
     align-items: baseline;
     justify-content: center;
@@ -13,7 +13,7 @@
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 50%;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     text-align: left;
   }
 }
@@ -22,7 +22,7 @@
 }
 .address {
   text-align: center;
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -60,7 +60,7 @@
 }
 .address__list {
   margin-bottom: 60px;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-bottom: 0;
     margin-right: 70px;
   }

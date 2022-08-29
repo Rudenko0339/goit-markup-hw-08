@@ -388,7 +388,7 @@
     </main>
     <!-- футер -->
     <footer class="footer">
-      <div class="footer-container container">
+      <div class="footer__container container">
         <div class="address">
           <div class="address__join">
             <a lang="en" class="address__logo footer__logo" href="./index.html"
@@ -459,21 +459,20 @@
         <div class="mail footer__mail">
           <form action="#" class="mail__form">
             <p class="mail__text">Підпишіться на розсилку</p>
-            <div class="mail__button">
-              <input
-                type="email"
-                class="mail__input"
-                name="user-email"
-                placeholder="E-mail"
-              />
-            </div>
+            <input
+              type="email"
+              class="mail__input"
+              name="user-email"
+              placeholder="E-mail"
+            />
+
+            <button type="submit" class="mail__btn cursor">
+              Підписатися
+              <svg class="mail__icon" width="24" height="24">
+                <use href="./images/symbol-defs.svg#icon-telegramm"></use>
+              </svg>
+            </button>
           </form>
-          <button type="submit" class="mail__btn cursor">
-            Підписатися
-            <svg class="mail__icon" width="24" height="24">
-              <use href="./images/symbol-defs.svg#icon-telegramm"></use>
-            </svg>
-          </button>
         </div>
       </div>
     </footer>
