@@ -1,17 +1,30 @@
 .header-auth {
-  // display: flex;
   display: none;
+  @include tablet {
+    display: block;
+  }
   gap: 50px;
   margin-left: auto;
   align-items: center;
+  @include desktop {
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+  }
 }
 
 .header-contact {
-  @include font(14px, 1.14, 500, 0.02em);
-  color: var(--title-text-color);
   padding: 32px 0;
-  display: flex;
-  align-items: center;
+  @include tablet {
+    @include font(12px, 1.16, 500, 0.02em);
+    margin-bottom: 10px;
+  }
+  @include desktop {
+    @include font(14px, 1.16, 500, 0.02em);
+  }
+
+  color: var(--title-text-color);
+
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

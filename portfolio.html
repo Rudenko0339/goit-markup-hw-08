@@ -15,12 +15,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- хедер -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container container-header">
         <nav class="header-nav">
           <a lang="en" class="header-logo" href="./index.html"
@@ -28,18 +27,20 @@
           </a>
           <ul class="header-list list">
             <li class="header-item">
-              <a href="./index.html" class="link header-link link">Студія</a>
+              <a href="" class="header-link link">Студія</a>
             </li>
             <li class="header-item">
-              <a class="header-link link current" href="">Портфоліо</a>
+              <a class="current header-link link" href="./portfolio.html"
+                >Портфоліо</a
+              >
             </li>
             <li class="header-item">
               <a class="header-link link" href="">Контакти</a>
             </li>
           </ul>
-        </nav> -->
-    <!-- навигация авторизации -->
-    <!-- <ul class="header-auth list">
+        </nav>
+        <!-- навигация авторизации -->
+        <ul class="header-auth list">
           <li class="auth-item">
             <a href="mailto:info@devstudio.com" class="header-contact link">
               <svg class="header-icon" width="16" height="12">
@@ -57,8 +58,97 @@
             >
           </li>
         </ul>
+        <!-- моб меню  -->
+        <button class="menu-open" type="button">
+          <svg class="menu-open-icon" width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-heder-menu"></use>
+          </svg>
+        </button>
+
+        <div class="mob-menu is-hidden">
+          <div class="container">
+            <div class="mob-menu-top">
+              <button class="menu-close" type="button">
+                <svg class="menu-close-icon" width="40" height="40">
+                  <use href="./images/symbol-defs.svg#icon-close"></use>
+                </svg>
+              </button>
+
+              <ul class="mob-menu-list">
+                <li class="mob-menu-item">
+                  <a href="./index.html" class="mob-menu-link">Студія</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a href="./portfolio.html" class="mob-menu-link current-mob"
+                    >Портфоліо</a
+                  >
+                </li>
+                <li class="mob-menu-item">
+                  <a href="" class="mob-menu-link">Контакти</a>
+                </li>
+              </ul>
+            </div>
+            <div class="mob-menu-bottom">
+              <ul class="mob-contact-list">
+                <li class="mob-contact-item">
+                  <a href="tel:+380961111111" class="mob-tel"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mob-contact-item">
+                  <a href="mailto:info@devstudio.com" class="mob-mail"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+
+              <ul class="mob-soc list">
+                <li class="mob-soc-item">
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    class="mob-soc-link link"
+                  >
+                    instagram
+                  </a>
+                </li>
+                <li class="mob-soc-item">
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    class="mob-soc-link link"
+                  >
+                    twitter
+                  </a>
+                </li>
+                <li class="mob-soc-item">
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    class="mob-soc-link link"
+                  >
+                    facebook
+                  </a>
+                </li>
+                <li class="mob-soc-item">
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    class="mob-soc-link link"
+                  >
+                    linkedin
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </header> -->
+    </header>
     <!-- портфолио -->
     <main class="main-portfolio">
       <section class="section-portfolio">
@@ -95,11 +185,33 @@
             <li class="picture-item">
               <a href="" class="picture-link">
                 <div class="hidden-item">
-                  <img
-                    src="./images/Technokryak.jpg"
-                    alt="Технокряк"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/technokryak-desk-1x.jpg 1x,
+                        ./images/technokryak-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/technokryak-tab-1x.jpg 1x,
+                        ./images/technokryak-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/technokryak-mob-1x.jpg 1x,
+                        ./images/technokryak-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/technokryak-mob-1x.jpg"
+                      alt="Технокряк"
+                    />
+                  </picture>
                   <p class="hidden-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -115,11 +227,35 @@
             <li class="picture-item">
               <a href="" class="picture-link">
                 <div class="hidden-item">
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/basket-poster-desk-1x.jpg 1x,
+                        ./images/basket-poster-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/basket-poster-tab-1x.jpg 1x,
+                        ./images/basket-poster-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/basket-poster-mob-1x.jpg 1x,
+                        ./images/basket-poster-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/basket-poster-mob-2x.jpg" alt="Постер" />
+                  </picture>
+                  <!-- <img
                     src="./images/Basket-poster.jpg"
                     alt="Постер New Orlean vs Golden Star"
                     width="370"
-                  />
+                  /> -->
                   <p class="hidden-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Ducimus numquam expedita necessitatibus consectetur corporis
@@ -137,11 +273,35 @@
             <li class="picture-item">
               <a href="" class="picture-link">
                 <div class="hidden-item">
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/restaurant-desk-1x.jpg 1x,
+                        ./images/restaurant-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/restaurant-tab-1x.jpg 1x,
+                        ./images/restaurant-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/restaurant-tab-1x.jpg 1x,
+                        ./images/restaurant-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/restaurant-tab-1x.jpg" alt="Ресторан" />
+                  </picture>
+                  <!-- <img
                     src="./images/Restaurant.jpg"
                     alt="Ресторан Seafood"
                     width="370"
-                  />
+                  /> -->
                   <p class="hidden-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -157,11 +317,38 @@
             <li class="picture-item">
               <a href="" class="picture-link">
                 <div class="hidden-item">
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-prime-desk-1x.jpg 1x,
+                        ./images/project-prime-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-prime-tab-1x.jpg 1x,
+                        ./images/project-prime-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-prime-mob-1x.jpg 1x,
+                        ./images/project-prime-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/project-prime-mob-1x.jpg"
+                      alt="Проект Прайм"
+                    />
+                  </picture>
+                  <!-- <img
                     src="./images/Project-prime.jpg"
                     alt="Проект Prime"
                     width="370"
-                  />
+                  /> -->
                   <p class="hidden-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -177,11 +364,38 @@
             <li class="picture-item">
               <a href="" class="picture-link">
                 <div class="hidden-item">
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-box-desk-1x.jpg 1x,
+                        ./images/project-box-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-box-tab-1x.jpg 1x,
+                        ./images/project-box-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-box-mob-1x.jpg 1x,
+                        ./images/project-box-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/project-box-mob-1x.jpg"
+                      alt="Проект Бокс"
+                    />
+                  </picture>
+                  <!-- <img
                     src="./images/Project-box.jpg"
                     alt="Проект Prime"
                     width="370"
-                  />
+                  /> -->
                   <p class="hidden-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -198,11 +412,38 @@
             <li class="picture-item">
               <a href="" class="picture-link">
                 <div class="hidden-item">
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/inspriration-desk-1x.jpg 1x,
+                        ./images/inspriration-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/inspriration-tab-1x.jpg 1x,
+                        ./images/inspriration-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/inspriration-mob-1x.jpg 1x,
+                        ./images/inspriration-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/inspriration-mob-1x.jpg"
+                      alt="Натхнення"
+                    />
+                  </picture>
+                  <!-- <img
                     src="./images/Inspriration.jpg"
                     alt="Inspiration has no Borders"
                     width="370"
-                  />
+                  /> -->
                   <p class="hidden-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -218,11 +459,38 @@
             <li class="picture-item">
               <a href="" class="picture-link">
                 <div class="hidden-item">
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/publication-desk-1x.jpg 1x,
+                        ./images/publication-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/publication-tab-1x.jpg 1x,
+                        ./images/publication-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/publication-mob-1x.jpg 1x,
+                        ./images/publication-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/publication-mob-1x.jpg "
+                      alt="Публікації"
+                    />
+                  </picture>
+                  <!-- <img
                     src="./images/Publication.jpg"
                     alt="Издание Limited Edition"
                     width="370"
-                  />
+                  /> -->
                   <p class="hidden-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -238,11 +506,38 @@
             <li class="picture-item">
               <a href="" class="picture-link">
                 <div class="hidden-item">
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-lab-desk-1x.jpg 1x,
+                        ./images/project-lab-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-lab-tab-1x.jpg 1x,
+                        ./images/project-lab-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-lab-mob-1x.jpg 1x,
+                        ./images/project-lab-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/project-lab-mob-1x.jpg"
+                      alt="Проект Лаб"
+                    />
+                  </picture>
+                  <!-- <img
                     src="./images/Project-lab.jpg"
                     alt="Проект LAB"
                     width="370"
-                  />
+                  /> -->
                   <p class="hidden-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -258,11 +553,35 @@
             <li class="picture-item">
               <a href="" class="picture-link">
                 <div class="hidden-item">
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/business-desk-1x.jpg 1x,
+                        ./images/business-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/business-tab-1x.jpg 1x,
+                        ./images/business-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/business-mob-1x.jpg 1x,
+                        ./images/business-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/business-mob-1x.jpg" alt="Бізнес" />
+                  </picture>
+                  <!-- <img
                     src="./images/business.jpg"
                     alt="Growing Business"
                     width="370"
-                  />
+                  /> -->
                   <p class="hidden-text">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Tempore incidunt maiores in! Adipisci consectetur fugit
@@ -280,73 +599,76 @@
       </section>
     </main>
     <!--футер -->
-    <!-- <footer class="footer">
-      <div class="footer-container container">
+    <footer class="footer">
+      <div class="footer__container container">
         <div class="address">
-          <a lang="en" class="address__logo footer__logo" href="./index.html"
-            ><span class="address__logo--blue">Web</span>Studio
-          </a>
-          <ul class="address__list list">
-            <li>
-              <a
-                target="_blank"
-                class="address__link link"
-                href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383859"
-              >
-                м. Київ, пр-т Лесі Українки, 26
-              </a>
-            </li>
-            <li>
-              <a
-                class="address__link address__mail"
-                href="mailto:info@example.com"
-                >info@example.com</a
-              >
-            </li>
-            <li>
-              <a class="address__link address__tel" href="tel:+380991111111"
-                >+38 099 111 11 11</a
-              >
-            </li>
-          </ul>
-        </div> -->
-    <!-- ПРИЄДНУЙТЕСЬ -->
-    <!-- <div class="join footer__join">
-          <p class="join__text">ПРИЄДНУЙТЕСЬ</p>
-          <ul class="join__list">
-            <li class="join__item">
-              <a href="" class="join__link">
-                <svg class="join__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="join__item">
-              <a href="" class="join__link link">
-                <svg class="join__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="join__item">
-              <a href="" class="join__link link">
-                <svg class="join__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="join__item">
-              <a href="" class="join__link link">
-                <svg class="join__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div> -->
+          <div class="address__join">
+            <a lang="en" class="address__logo footer__logo" href="./index.html"
+              ><span class="address__logo--blue">Web</span>Studio
+            </a>
+            <ul class="address__list list">
+              <li>
+                <a
+                  target="_blank"
+                  class="address__link link"
+                  href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383859"
+                >
+                  м. Київ, пр-т Лесі Українки, 26
+                </a>
+              </li>
+              <li>
+                <a
+                  class="address__link address__mail"
+                  href="mailto:info@example.com"
+                  >info@example.com</a
+                >
+              </li>
+              <li>
+                <a class="address__link address__tel" href="tel:+380991111111"
+                  >+38 099 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- ПРИЄДНУЙТЕСЬ -->
+          <div class="join footer__join">
+            <p class="join__text">ПРИЄДНУЙТЕСЬ</p>
+            <ul class="join__list">
+              <li class="join__item">
+                <a href="" class="join__link">
+                  <svg class="join__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="join__item">
+                <a href="" class="join__link link">
+                  <svg class="join__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="join__item">
+                <a href="" class="join__link link">
+                  <svg class="join__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="join__item">
+                <a href="" class="join__link link">
+                  <svg class="join__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-    <!-- почта  -->
-    <!-- <div class="mail footer__mail">
+        <!-- почта  -->
+
+        <div class="mail footer__mail">
           <form action="#" class="mail__form">
             <p class="mail__text">Підпишіться на розсилку</p>
             <input
@@ -355,6 +677,7 @@
               name="user-email"
               placeholder="E-mail"
             />
+
             <button type="submit" class="mail__btn cursor">
               Підписатися
               <svg class="mail__icon" width="24" height="24">
@@ -364,6 +687,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -1,3 +1,10 @@
+.container-header {
+  display: flex;
+  position: relative;
+  @include tablet {
+    align-items: center;
+  }
+}
 .header-link {
   @include font(14px, 1.14, 500, 0.02em);
   display: block;
@@ -14,9 +21,7 @@
     outline: none;
   }
 }
-// .header {
-//   display: none;
-// }
+
 .header-nav {
   display: flex;
   align-items: center;
@@ -25,7 +30,9 @@
   }
 }
 .header-list {
-  display: flex;
+  @include tablet {
+    display: flex;
+  }
   margin-left: 93px;
   padding: 0;
   display: none;
@@ -46,11 +53,12 @@
     background-color: var(--acсent-color);
   }
 }
-.container-header {
-  display: flex;
-}
+
 .header-logo {
-  @include font(26px, 1.19, 700, 0.03em);
+  @include desktop {
+    @include font(26px, 1.16, 500, 0.02em);
+  }
+  @include font(24px, 1.19, 700, 0.03em);
   color: #000000;
   font-family: "raleway";
   font-style: normal;
